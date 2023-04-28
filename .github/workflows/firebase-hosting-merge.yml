@@ -6,6 +6,8 @@ name: Deploy to Firebase Hosting on merge
   push:
     branches:
       - dev
+env:
+  FIREBASE_TOKEN: ${{ env.FIREBASE_TOKEN }}
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
