@@ -19,6 +19,7 @@ function App() {
           </li>
           <li>
             <Link to="/contact">Contact</Link>
+            <link to="/Q&A">Q&A</link>
           </li>
         </ul>
       </nav>
@@ -26,6 +27,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
+        <Route path="/Q&A" component={Q&A} />
       </Switch>
     </BrowserRouter>
   );
