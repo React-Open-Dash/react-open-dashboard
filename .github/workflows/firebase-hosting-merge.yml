@@ -15,5 +15,5 @@ jobs:
         with:
           node-version: 18
       - run: npm ci && npm run build
-      - run: npm i -g @firebase-tools
+      - run: npm i -g firebase-tools
       - run: firebase deploy --token "${{ secrets.FIREBASE_SERVICE_ACCOUNT_REACT_OPEN_DASHBOARD }}" --non-interactive
