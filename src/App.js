@@ -1,10 +1,10 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import React from "react";
-import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
-import Home from "./components/Home";
-import About from "./components/About";
-import Contact from "./components/Contact";
+import { BrowserRouter, Link } from 'react-router-dom';
+// import Home from "./components/Home";
+// import About from "./components/About";
+// import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -19,10 +19,10 @@ function App() {
           </li>
         </ul>
       </nav>
-      <Routes>
+      {/* <Routes>
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
-      </Routes>
+      </Routes> */}
     </BrowserRouter>
   );
 }
