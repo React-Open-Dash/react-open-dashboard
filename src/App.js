@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React from "react";
-import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
@@ -19,10 +19,10 @@ function App() {
           </li>
         </ul>
       </nav>
-      <Switch>
+      <Routes>
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
-      </Switch>
+      </Routes>
     </BrowserRouter>
   );
 }
