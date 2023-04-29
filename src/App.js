@@ -12,22 +12,16 @@ function App() {
       <nav>
         <ul>
           <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
             <Link to="/about">About</Link>
           </li>
           <li>
             <Link to="/contact">Contact</Link>
-            <link to="/Q&A">Q&A</link>
           </li>
         </ul>
       </nav>
       <Switch>
-        <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
-        <Route path="/Q&A" component={Q&A} />
       </Switch>
     </BrowserRouter>
   );
