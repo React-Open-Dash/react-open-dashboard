@@ -8,10 +8,10 @@ import { Suspense } from 'react';
 export const DashboardContainer = () => {
 	return (
 		<>
-			<Header />
 			<div className={styles.container}>
 				<SideBarMenu routes={dashboardRoutes} />
-				<main>
+				<main className={styles.main}>
+					<Header />
 					<Suspense fallback={<>...</>}>
 						<Outlet />
 					</Suspense>
