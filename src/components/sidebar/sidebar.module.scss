@@ -12,7 +12,7 @@
 	}
 
 	&__logo {
-		width: 200px;
+		width: 150px;
 		height: auto;
 	}
 
@@ -28,11 +28,23 @@
 	&__item {
 		padding: 15px 10px;
 		border-radius: 10px;
+		display: flex;
+		gap: 10px;
 
 		&:hover {
+			background-color: rgb(142, 142, 142);
+			cursor: pointer;
+			color: white;
+		}
+
+		&--active {
 			background-color: rgb(75, 75, 75);
 			cursor: pointer;
 			color: white;
+		}
+
+		&-icon--active {
+			color: yellow;
 		}
 	}
 

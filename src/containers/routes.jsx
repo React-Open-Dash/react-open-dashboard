@@ -5,11 +5,13 @@ import { LoginContainer } from './login';
 const routes = [
 	{
 		path: '/dash',
+		iconClass: '',
 		element: <DashboardContainer />,
 		children: dashboardRoutes,
 	},
 	{
 		path: '/login',
+		iconClass: '',
 		element: <LoginContainer />,
 	},
 ];

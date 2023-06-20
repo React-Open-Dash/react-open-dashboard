@@ -1,29 +1,34 @@
-import React, { Suspense } from 'react';
-import { HomeContainer } from './home';
-// import { IconsContainer } from './icons';
+import React, { lazy } from 'react';
 
-const IconsContainer = React.lazy(() => import('./icons/index'));
+const HomeContainer = lazy(() => import('./home'));
+const ButtonsContainer = lazy(() => import('./buttons'));
+const FormsContainer = lazy(() => import('./forms'));
+const IconsContainer = lazy(() => import('./icons'));
 
 export const dashboardRoutes = [
 	{
 		path: '/dash',
 		title: 'Home',
+		iconClass: 'fa fa-home',
 		element: <HomeContainer />,
 		children: [],
 	},
 	{
 		path: '/dash/icons',
 		title: 'Icons',
+		iconClass: 'fa fa-grav',
 		element: <IconsContainer />,
 	},
 	{
 		path: '/dash/buttons',
 		title: 'Buttons',
-		element: <h1>Buttons</h1>,
+		iconClass: 'fa fa-plus-circle',
+		element: <ButtonsContainer />,
 	},
 	{
 		path: '/dash/forms',
 		title: 'Forms',
-		element: <h1>Forms</h1>,
+		iconClass: 'fa fa-square-o',
+		element: <FormsContainer />,
 	},
 ];

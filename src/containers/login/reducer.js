@@ -1,12 +1,12 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const defaultState = {
-  isAuthorized: false,
+	isAuthorized: false,
 };
 
 const authSlice = createSlice({
-  name: "auth",
-  initialState: { ...defaultState },
+	name: 'auth',
+	initialState: { ...defaultState }
 });
 
 export default authSlice;
