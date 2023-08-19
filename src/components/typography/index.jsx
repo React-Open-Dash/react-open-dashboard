@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './typography.module.scss';
 
 /**
  * <p>**DOCS**</p>
@@ -13,32 +14,42 @@ import PropTypes from 'prop-types';
  * 4. Even if every type of Typography has their own size and color and weigth,...etc, this should be customizable using props.
  * 5. The component must be typed using prop-types.
  * 6. The component styles should be created using scss modules, also, the scss should use the architecture BEM.
- * 7. sThis component should be tested — jest and react testing library already installed, have a look in a tutorial.
+ * 7. This component should be tested — jest and react testing library already installed, have a look in a tutorial.
  * 8. The component should be described and integrated in story book.
  */
-const TypographyComponent = ({
-	type = 'h1',
-	weight = '600',
-	fontSize = 'h1',
-}) => {
-	return <div>TypographyComponent</div>;
+const TypographyComponent = ({ type = 'regular', fontSize, children }) => {
+	const style = fontSize ?? type;
+	const render = {
+		h1: <h1 className={styles[style]}>{children}</h1>,
+		h2: <h2 className={styles[style]}>{children}</h2>,
+		h3: <h3 className={styles[style]}>{children}</h3>,
+		h4: <h4 className={styles[style]}>{children}</h4>,
+		h5: <h5 className={styles[style]}>{children}</h5>,
+		h6: <h6 className={styles[style]}>{children}</h6>,
+		regular: <p className={styles[style]}>{children}</p>,
+		regularBold: <strong className={styles[style]}>{children}</strong>,
+		small: <small className={styles[style]}>{children}</small>,
+	};
+
+	return render[type];
 };
 
 TypographyComponent.propTypes = {
 	/**
-	 * Specify the type of the typography, choosing this will give you the tag type in html
-	 * for example if you choose type 'h1', you will render <h1></h1>
+	 * One of h1,h2,h3,h4,h5,h6,regular,regularBold,small
+	 * It defines the right tag to use and styles,
+	 * the fontSizes are responsive, all font sinzes are relative
+	 * to the body of the page.
 	 */
 	type: PropTypes.string,
 	/**
-	 * You can override the weight of the Typography type you choose, currently we support only two weights
-	 * with OpenSans, 400 & 600
-	 */
-	weight: PropTypes.string,
-	/**
-	 * You can specify the font size of any typography type
+	 * Defines the style of the fonts
 	 */
 	fontSize: PropTypes.string,
+	/**
+	 * Some code
+	 */
+	children: PropTypes.any,
 };
 
 export default TypographyComponent;

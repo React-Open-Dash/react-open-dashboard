@@ -1,5 +1,11 @@
+import TypographyComponent from '@components/typography';
+
 const HomeContainer = () => {
-	return <div>Home container</div>;
+	return (
+		<div>
+			<TypographyComponent type='h1'>Home</TypographyComponent>
+		</div>
+	);
 };
 
 export default HomeContainer;

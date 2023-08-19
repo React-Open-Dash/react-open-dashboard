@@ -14,7 +14,7 @@ import PropTypes from 'prop-types';
  * 5. This component should have stories defined for storybook.
  * 6. This component should be typed using propTypes.
  * 7. This component should support any icon provided by font-awersome-4 — already installed in the project.
- * 
+ *
  */
 const ButtonComponent = ({ type = 'filled', text }) => {
 	return <button>Button</button>;
@@ -22,9 +22,9 @@ const ButtonComponent = ({ type = 'filled', text }) => {
 
 ButtonComponent.propTypes = {
 	/**
-	 * outline | filled | ghost
+	 * Style of the button
 	 */
-	type: (PropTypes.string = 'outlined'),
+	type: (PropTypes.string = 'outlined' | 'filled' | 'ghost'),
 	icon: PropTypes.string,
 	/**
 	 * The text that will be displayed inside the button
