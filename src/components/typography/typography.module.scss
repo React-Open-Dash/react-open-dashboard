@@ -1,0 +1,32 @@
+$heading-styles: (
+	'h1': 2rem,
+	'h2': 1.9rem,
+	'h3': 1.7rem,
+	'h4': 1.6rem,
+	'h5': 1.45rem,
+	'h6': 1.29rem,
+);
+
+@each $key, $value in $heading-styles {
+	.#{$key} {
+		font-size: #{$value};
+		text-rendering: optimizeLegibility;
+		font-weight: 600;
+	}
+}
+
+.regular {
+	font-size: 1rem;
+	font-weight: 400;
+	text-rendering: optimizeLegibility;
+
+	&Bold {
+		font-weight: 600;
+	}
+}
+
+.small {
+	font-size: 0.86rem;
+	font-weight: 400;
+	text-rendering: optimizeLegibility;
+}

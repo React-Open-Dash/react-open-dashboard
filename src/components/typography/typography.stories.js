@@ -10,8 +10,6 @@ export default {
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const defaultState = {
 	args: {
-		type: 'h1',
-		weight: 'h2',
-		fontSize: 'regular',
+		children: 'Just an example',
 	},
 };

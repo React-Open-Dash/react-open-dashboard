@@ -16,6 +16,6 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-      - run: npm ci && npm run build
+      - run: npm i && npm run build
       - run: npm i -g firebase-tools
       - run: firebase deploy --token "$FIREBASE_TOKEN"
